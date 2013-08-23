@@ -48,3 +48,28 @@ If you need to **install Git** enter the following:
 
 	sudo port install git-core +svn +doc +bash_completion +gitweb
 
+### 2. Node & Karma
+
+You will need [Node.js](http://nodejs.org/) and Karma to run unit tests, so please verify that you have Node.js v0.8 or better installed and that the node executable is on your PATH by running the following command in a terminal window:
+
+	node --version
+
+Additionally install [Karma](http://karma-runner.github.io/) if you don't have it already:
+
+	npm install -g karma
+
+### 3. Cloning Angular's PhoneCat app
+
+Clone the angular-phonecat repository located at Github by running the following command:
+
+	git clone git://github.com/angular/angular-phonecat.git 
+
+This command creates the angular-phonecat directory in your current directory.
+
+Change your current directory to angular-phonecat:
+
+	cd angular-phonecat
+
+The tutorial instructions assume you are running all commands from the angular-phonecat directory.
+
+You will need an http server running on your system. Mac and Linux machines typically have Apache pre-installed, but If you don't already have one installed, you can use node to run scripts/web-server.js, a simple bundled http server.
