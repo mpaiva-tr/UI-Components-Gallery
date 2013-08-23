@@ -44,7 +44,7 @@ Make sure you have Git installed by using the following command line on your **T
 
 	git --version
 	
-If you need to install git enter the following:
+If you need to **install Git** enter the following:
 
 	sudo port install git-core +svn +doc +bash_completion +gitweb
 
