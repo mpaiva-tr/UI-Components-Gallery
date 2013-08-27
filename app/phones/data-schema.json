@@ -1,0 +1,74 @@
+{
+    "object-type": "control",
+    "name": "Control Name",
+    "description": "Control long description or summary.",
+    "status": {
+        "value":"Best Practice",
+        "options": ["Best Practice", "Working Solution", "Proposal"]
+    },
+    "category": {
+        "value":"Input",
+        "options": ["Input", "Display", "Layout", "Container"]
+        },
+    "tags": [
+        "tag 1", "tag 2", "tag 3", "tag 4"
+        ],
+    "problem": [
+        {"title": "title 1", "description":"description 1"},
+        {"title": "title 2", "description":"description 2"},
+        {"title": "title 3", "description":"description 3"}
+    ],
+    "solution": [
+        {"title": "title 1", "description":"description 1"},
+        {"title": "title 2", "description":"description 2"},
+        {"title": "title 3", "description":"description 3"}
+    ],
+    "usage": [
+        {"title": "title 1", "description":"description 1"},
+        {"title": "title 2", "description":"description 2"},
+        {"title": "title 3", "description":"description 3"}
+    ],
+    "rationale": [
+        {"title": "title 1", "description":"description 1"},
+        {"title": "title 2", "description":"description 2"},
+        {"title": "title 3", "description":"description 3"}
+    ],
+    "examples": [
+        {"image": "url/1", "caption":"caption for image 1"},
+        {"image": "url/2", "caption":"caption for image 2"},
+        {"image": "url/3", "caption":"caption for image 3"}
+    ],
+    "accessibility": [
+        {"title": "title 1", "description":"description 1"},
+        {"title": "title 2", "description":"description 2"},
+        {"title": "title 3", "description":"description 3"}
+    ],
+    "assets": [
+        {
+            "title": "title 1", 
+            "description":"description 1", 
+            "url": "url 1", 
+            "type":"keynote", 
+            "category":"Interaction Design"
+        },
+        {
+            "title": "title 2", 
+            "description":"description 2", 
+            "url": "url 2", 
+            "type":"photoshop", 
+            "category":"Visual Design"
+        },
+        {
+            "title": "title 3", 
+            "description":"description 3", 
+            "url": "url 3", 
+            "type":"zip", 
+            "category":"Technical Design"
+        }
+        ],
+    "references": [
+        {"title": "title 1", "description":"description 1", "url": "url 1", "type":"blog"},
+        {"title": "title 2", "description":"description 2", "url": "url 2", "type":"blog"},
+        {"title": "title 3", "description":"description 3", "url": "url 3", "type":"external"}
+    ]
+}
