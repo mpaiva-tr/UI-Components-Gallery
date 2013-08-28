@@ -1,0 +1,11 @@
+[
+    {
+        "age": 0, 
+        "id": "pattern-x", 
+        "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg", 
+        "name": "Pattern Name X", 
+        "category": "Input",
+        "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
+        "status": "Best Practice"
+    }
+]

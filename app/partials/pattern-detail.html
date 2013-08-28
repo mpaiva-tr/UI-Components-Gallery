@@ -1,0 +1,60 @@
+<!-- Header -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+      <span class="navbar-brand">{{pattern.name}}</span>
+    </div>
+  </div>
+</div> <!-- /header -->
+
+<!-- Body Container -->
+<div class="container">
+
+<h1>{{pattern.name}}</h1>
+
+<p>{{pattern.description}}</p>
+
+<!--ul class="phone-thumbs">
+  <li ng-repeat="img in phone.images">
+    <img ng-src="{{img}}" ng-click="setImage(img)">
+  </li>
+</ul-->
+
+<div ng-controller="patternDetailCtrl">
+  <carousel interval="myInterval">
+    <slide ng-repeat="img in pattern.images">
+      <img ng-src="{{img}}" style="margin:auto;" ng-click="setImage(img)">
+      <div class="carousel-caption">
+        <h4>{{pattern.examples.image[$index]}}</h4>
+        <p>{{pattern.examples.caption[$index]}}</p>
+      </div>
+    </slide>
+  </carousel>
+      <input type="hidden" ng-model="myInterval" value="1000">
+</div>
+
+
+<ul class="specs">
+  <li>
+    <h2>Tags</h2>
+      <ul>
+        <li ng-repeat="tag in pattern.tags">{{tag}}</li>
+      </ul>
+  </li>
+  
+  <li>
+    <h2>Problems</h2>
+      <ul>
+      <li><strong ng-repeat="title in pattern.problem.title">{{title}}</strong> - <span ng-repeat="description in pattern.problem.description">{{problem.description}}</span></li>
+    </ul>
+  </li>
+</ul>
+
+</div> <!-- /body container -->
