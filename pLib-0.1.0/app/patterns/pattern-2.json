@@ -96,7 +96,7 @@
   ],
   "accessibility": [
     {
-      "title": "This component is complaint!",
+      "title": "This component is compliant!",
       "description": "description 1",
       "type": "success"
     },
