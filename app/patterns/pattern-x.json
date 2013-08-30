@@ -1,21 +1,16 @@
 {
     "id": "pattern-x",
+    "code": "tab-item",
     "object-type": "control",
     "name": "Pattern Name X",
     "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
-    "status": {
-        "value":"Best Practice",
-        "options": ["Best Practice", "Working Solution", "Proposal"]
-    },
-    "category": {
-        "value":"Input",
-        "options": ["Input", "Display", "Layout", "Container"]
-        },
-    "tags": [
-        "tag 1", "tag 2", "tag 3", "tag 4"
-        ],
+    "status": "Best Practice",
+    "status-options": ["Best Practice", "Working Solution", "Proposal"],
+    "category": "Input",
+    "category-options":["Input", "Display", "Layout", "Container"],  
+    "tags": ["tag 1", "tag 2", "tag 3", "tag 4"],
     "problem": [
-        {"title": "title 1", "description":"description 1"},
+        {"title": "Big Problem", "description":"description 1"},
         {"title": "title 2", "description":"description 2"},
         {"title": "title 3", "description":"description 3"}
     ],
@@ -39,11 +34,13 @@
         {"image": "img/phones/dell-streak-7.1.jpg", "caption":"caption for image 2"},
         {"image": "img/phones/dell-streak-7.2.jpg", "caption":"caption for image 3"}
     ],
-    "accessibility": [
-        {"title": "title 1", "description":"description 1"},
-        {"title": "title 2", "description":"description 2"},
-        {"title": "title 3", "description":"description 3"}
+    "accessibility":  [
+        {"title": "This component is complaint!", "description":"description 1", "type":"success"},
+        {"title": "title 2", "description":"description 2", "type":"info"},
+        {"title": "Make this component accessible", "description":"Question for Rob: How can we insert Markdown in JSON? ", "type":"warning"},
+        {"title": "Accessibility issue", "description":"This component is generally not compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.", "type":"danger"}
     ],
+    "accessibility-options": ["success", "info", "warning", "danger"],
     "assets": [
         {
             "title": "title 1", 

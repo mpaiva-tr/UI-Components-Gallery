@@ -12,7 +12,8 @@ function patternListCtrl($scope, pattern) {
 
 
 function patternDetailCtrl($scope, $routeParams, pattern) {
-  $scope.pattern = pattern.get({patternId: $routeParams.patternId}, function(pattern) {
+  pattern.get({patternId: $routeParams.patternId}, function(pattern) {
+  	$scope.pattern = pattern;
     $scope.mainImageUrl = pattern.images[0];
   });
 

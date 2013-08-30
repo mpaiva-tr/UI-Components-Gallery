@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Nova-Kit UI Patterns</a>
+      <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span> &nbsp; Nova-Kit UI Patterns</a>
     </div>
 
     <div class="collapse navbar-collapse header-collapse">
@@ -36,19 +36,13 @@
 
 <!-- Body Container -->
 <div class="container">
-  <!-- Hero Banner -->
-  <div class="jumbotron">
-    <h1>Heading 1</h1>
-    <p>Paragraph 1</p>
-    <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-  </div> <!-- /hero banner -->
 
   <!-- Grid Section -->
   <div class="row">
 
 
     <!-- Box -->
-    <div class="col-lg-4" ng-repeat="pattern in patterns | filter:query | orderBy:orderProp">
+    <div class="col-sm-4" ng-repeat="pattern in patterns | filter:query | orderBy:orderProp">
       <div class="panel panel-default" id="headings">
 
         <!-- box header -->
