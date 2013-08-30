@@ -1,0 +1,94 @@
+<!-- Header -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <span class="glyphicon glyphicon-home"></span>&nbsp; Nova-Kit UI Patterns</a>
+        </div>
+        <div class="collapse navbar-collapse header-collapse">
+            <!-- Search Filter -->
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" ng-model="query">
+                </div>
+            </form>
+            <!-- Sort By -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sort by
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="sort by">
+                        <li>
+                            <a tabindex="-1" href="javascript:void(0);" value="age" ng-click="orderProp='age'">Newest</a>
+                        </li>
+                        <!--li class="divider"></li-->
+                        <li>
+                            <a tabindex="-1" href="javascript:void(0);" value="name" ng-click="orderProp='name'">Alphabetical</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /header -->
+<!-- Body Container -->
+<div class="container">
+    <!-- Grid Section -->
+    <div class="row">
+        <!-- Box -->
+        <div class="col-sm-4" ng-repeat="pattern in patterns | filter:query | orderBy:orderProp">
+            <div class="panel panel-default" id="headings">
+                <!-- box header -->
+                <div class="panel-heading">
+                    <h4>
+                        <a href="#/patterns/{{pattern.id}}">{{pattern.name}}</a><span class="badge badge-primary pull-right">{{pattern.code}}</span>
+                    </h4>
+                </div>
+                <!-- box body -->
+                <div class="panel-body">
+                    <a href="#/patterns/{{pattern.id}}" class="thumb">
+                        <img ng-src="{{pattern.imageUrl}}" class="img-responsive">
+                    </a>
+                    <p>{{pattern.description}}</p>
+                </div>
+                <div class="panel panel-default" id="headings">
+                    <div class="panel-heading">
+                        <span class="label label-default">{{pattern.category}}</span>
+                        <span class="label label-{{pattern.statusColor}}">{{pattern.statusLabel}}</span>
+                        <!-- dropdown -->
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs">Downloads</button>
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <!-- Dropdown menu links -->
+                                <li>
+                                    <a href="">Keynote Stencil</a>
+                                </li>
+                                <li>
+                                    <a href="">Photoshop Stencil</a>
+                                </li>
+                                <li>
+                                    <a href="">HTML5 Demo</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /dropdown -->
+                    </div>
+                </div>
+            </div>
+            <!-- /box -->
+        </div>
+    </div>
+    <!-- /grid section -->
+</div>
+<!-- /body container -->
