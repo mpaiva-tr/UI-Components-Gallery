@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'KnowledgeLight';
+    src: url('knowledge-light-webfont.eot');
+    src: url('knowledge-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('knowledge-light-webfont.woff') format('woff'),
+         url('knowledge-light-webfont.ttf') format('truetype'),
+         url('knowledge-light-webfont.svg#knowledgelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

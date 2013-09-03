@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pLib">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Eikon Nova-Kit UI Pattern Library</title>
+        <!-- Bootstrap core CSS -->
+        <!-- Latest compiled and minified CSS -->
+        <!-- link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"-->
+        <!-- Optional theme -->
+        <!--link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"-->
+        <!-- Bootstrap Orange Theme CSS -->
+        <link rel="stylesheet/less" type="text/css" href="css/theme.less" />
+                
+        <!-- Libraries -->
+        <script src="lib/less/less-1.4.1.min.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-resource.js"></script>
+        <script src="lib/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+        
+        <!-- App Scripts -->
+        <script src="http://download.pouchdb.com/pouchdb-nightly.min.js"></script>
+        <script src="js/pLib-app.js"></script>
+        <script src="js/pLib-db.js"></script>
+        <script src="js/pLib-controllers.js"></script>
+        <script src="js/pLib-directives.js"></script>
+        <script src="js/pLib-filters.js"></script>
+        <script src="js/pLib-services.js"></script>
+        <style>
+            body {
+                padding-top: 80px;
+                padding-bottom: 60px;
+            }
+            /*
+ * Grid examples
+ *
+ * Highlight the grid columns within the docs so folks can see their padding,
+ * alignment, sizing, etc.
+ */
+            .show-grid {
+                margin-bottom: 15px;
+            }
+            .show-grid[class^="col-"] {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background-color: #eee;
+                border: 1px solid #ddd;
+                background-color: rgba(86, 61, 124, .15);
+                border: 1px solid rgba(86, 61, 124, .2);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div ng-view></div>
+        <!-- Bootstrap core JavaScript==================================================- ->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
