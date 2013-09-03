@@ -1,0 +1,218 @@
+<!-- Header -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <span class="glyphicon glyphicon-home"></span>&nbsp; Nova-Kit UI Patterns</a>
+        </div>
+    </div>
+</div>
+<!-- /header -->
+<!-- Body Container -->
+<div class="container">
+    <!-- Hero Banner -->
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm-9 hidden-xs">
+                <h4>
+                    <span class="label label-{{pattern.statuscolor}}">{{pattern.statuslabel}}</span>
+                </h4>
+                <h1>{{pattern.name}}</h1>
+            </div>
+            <!-- Add the extra clearfix for only the required viewport -->
+            <div class="clearfix visible-xs">
+                <div class="col-sm-12">
+                    <h4>
+                        <span class="label label-success">{{pattern.status}}</span>
+                        <span class="glyphicon glyphicon-info-sign pull-right"></span><span class="pull-right">&nbsp;</span><span class="label label-primary pull-right">{{pattern.code}}</span>
+                    </h4>
+                    <h1>{{pattern.name}}</h1>
+                </div>
+            </div>
+            <div class="col-sm-3 hidden-xs">
+                <span class="glyphicon glyphicon-info-sign pull-right"></span><span class="pull-right">&nbsp;</span><span class="label label-id pull-right">{{pattern.code}}</span>
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <!-- Description -->
+            <div class="col-sm-12">
+                <p class="lead">{{pattern.description}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- /hero banner -->
+    <!-- (6/6) Category-Status / Tags -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <h4>Category:
+                <span class="label label-default">{{pattern.category}}</span>
+            </h4>
+        </div>
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix visible-xs">
+            <div class="col-xs-12 col-sm-6">
+                <hr />
+                <h4>Tags:
+                    <span ng-repeat="tag in pattern.tags" class="label label-default">{{tag}}</span>
+                </h4>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 hidden-xs text-right">
+            <h4>Tags:
+                <span ng-repeat="tag in pattern.tags" class="label label-default">{{tag}}</span>
+            </h4>
+        </div>
+    </div>
+    <!-- cat-status-tag -->
+    <hr />
+    <!-- (6/6) Examples / Problem-Solution-Usage -->
+    <div class="row">
+        <!-- Carrousel -->
+        <div class="col-xs-12 col-sm-6">
+            <div ng-controller="patternDetailCtrl">
+                <carousel interval="myInterval">
+                    <slide ng-repeat="example in pattern.examples">
+                        <img ng-src="{{example.image}}" style="margin:auto;" ng-click="setImage(img)">
+                        <div class="carousel-caption">
+                            <p>{{pattern.name}}<br/>
+                            <span class="badge badge-primary">{{pattern.code}}</span><p>
+                            <small>{{example.caption}}</small>
+                        </div>
+                    </slide>
+                </carousel>
+                <input type="hidden" ng-model="myInterval" value="1000">
+            </div>
+        </div>
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix visible-xs"><hr/></div>
+        <!-- Accordion -->
+        <div class="col-xs-12 col-sm-6">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Problem</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div ng-repeat="problem in pattern.problem">
+                                <h4>{{problem.title}}</h4>
+                                <p>{{problem.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Solution</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div ng-repeat="solution in pattern.solution">
+                                <h4>{{solution.title}}</h4>
+                                <p>{{solution.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Usage</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div ng-repeat="usage in pattern.usage">
+                                <h4>{{usage.title}}</h4>
+                                <p>{{usage.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /accordion -->
+    </div>
+    <!-- (6/6) /examples /problem-solution-usage -->
+    <hr/>
+    <!-- (6/6) Assets / References -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <!-- Box -->
+            <div class="panel panel-default">
+                <!-- box header -->
+                <div class="panel-heading">
+                    <h4>Design Assets</h4>
+                </div>
+                <!-- box body -->
+                <div class="panel-body" ng-repeat="assets in pattern.assets">
+                    <h4>{{assets.title}}
+                        <small>
+                            <span class="label label-default pull-right">{{assets.category}}</span>
+                        </small>
+                    </h4>
+                    <p>{{assets.description}}</p>
+                    <button type="button" class="btn btn-primary btn-md pull-right">
+                        <span class="glyphicon glyphicon-save"></span>{{assets.type}}</button>
+                    <span>{{assets.url}}</span>
+                </div>
+            </div>
+            <!-- /box -->
+        </div>
+        <!-- /assets -->
+        <!-- Add the extra clearfix for only the required viewport -->
+        <div class="clearfix visible-xs"></div>
+        <!-- References -->
+        <div class="col-xs-12 col-sm-6">
+            <!-- Box -->
+            <div class="panel panel-default">
+                <!-- box header -->
+                <div class="panel-heading">
+                    <h4>References</h4>
+                </div>
+                <!-- box body -->
+                <div class="panel-body" ng-repeat="references in pattern.references">
+                    <h4>{{references.title}}
+                        <small>
+                            <span class="label label-default pull-right">{{references.type}}</span>
+                        </small>
+                    </h4>
+                    <p>{{references.description}}
+                        <br/>
+                        <a href="{{references.url}}" target="blank">{{references.url}}</a>
+                    </p>
+                </div>
+            </div>
+            <!-- /box -->
+        </div>
+        <!-- /references -->
+    </div>
+    <!-- (6/6) /assets /references -->
+    <!-- Box -->
+    <div class="panel panel-default">
+        <!-- box header -->
+        <div class="panel-heading">
+            <h4>Accessibility</h4>
+        </div>
+        <!-- box body -->
+        <div class="panel-body" ng-repeat="accessibility in pattern.accessibility">
+            <div class="callout callout-{{accessibility.type}}">
+                <h4>{{accessibility.title}}</h4>
+                <p>{{accessibility.description}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- /box -->
+</div>
+<!-- /body container -->
