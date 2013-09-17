@@ -1,0 +1,45 @@
+{
+  "statusOptions": [
+    "Best Practice",
+    "Working Solution",
+    "Proposal"
+  ],
+  "statusOptionsColor": [
+    "success",
+    "info",
+    "warning",
+    "danger"
+  ],
+  "categoryOptions": [
+    "Input",
+    "Display",
+    "Layout",
+    "Container"
+  ],
+  "accessibilityOptions": [
+    "success",
+    "info",
+    "warning",
+    "danger"
+  ],
+  "assetsOptions": [
+    "Cognitive Design",
+    "Interaction Design",
+    "Visual Design",
+    "Technical Design"
+  ]
+  "assetsType": [
+    "Keynote",
+    "Photoshop",
+    "Zip",
+    "HTML",
+    "CSS",
+    "Javascript"
+  ],
+  "referencesType": [
+    "Blog",
+    "External",
+    "theHub",
+    "eikon.io"
+  ]
+}

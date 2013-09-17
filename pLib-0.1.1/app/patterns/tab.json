@@ -22,7 +22,7 @@
   "problem": [
     {
       "title": "Screen Real Estate",
-      "description": "The user needs to navigate through one or more stacked panes of content without refreshing the page."
+      "description": "The user needs to navigate through one or more stacked panes of content without refreshing the page in a limited screen real estate.\n\n"
     }
   ],
   "solution": [
@@ -41,16 +41,16 @@
   ],
   "usage": [
     {
-      "title": "title 1",
-      "description": "description 1"
+      "title": "Context",
+      "description": "Tabs provide context. They give visual indication of a user's location within a body of information."
     },
     {
-      "title": "title 2",
-      "description": "description 2"
+      "title": "Similar pattern",
+      "description": "Tabs build on a real world metaphor. The selected state is reinforced with the file folder tab metaphor of a folder physically in front of the others in the set."
     },
     {
-      "title": "title 3",
-      "description": "description 3"
+      "title": "Navigation",
+      "description": "Tabs provide navigation. They provide the ability to navigate alternate content views."
     }
   ],
   "rationale": [
@@ -83,13 +83,13 @@
   ],
   "accessibility": [
     {
-      "title": "This component is compliant!",
-      "description": "description 1",
+      "title": "Navigation",
+      "description": "Allow the user to navigate across the tabs in a logical order with the Tab key.",
       "type": "success"
     },
     {
-      "title": "title 2",
-      "description": "description 2",
+      "title": "Keystroke action",
+      "description": "A focused tab can be selected with the Enter key.",
       "type": "info"
     },
     {
@@ -98,9 +98,9 @@
       "type": "warning"
     },
     {
-      "title": "Accessibility issue",
-      "description": "This component is generally not compliant with accessibility standards. If you need to be compliant, please consider other options for presenting your content.",
-      "type": "danger"
+      "title": "Accessibility Recommendations",
+      "description": "Indicate the active tab (pane) by one of these alternative means (in addition to visual indication):\n\nInclude a TITLE attribute with the word \"active\" into the link that was just activated.\n\nInclude an invisible graphic with an ALT attribute and a word \"active\" into the link.\nAttach an ALT attribute with the word \"active\" to element that indicates active link.",
+      "type": "warning"
     }
   ],
   "accessibilityOptions": [
@@ -140,21 +140,15 @@
   ],
   "references": [
     {
-      "title": "title 1",
-      "description": "description 1",
-      "url": "url 1",
-      "type": "blog"
+      "title": "Bootstrap",
+      "description": "Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.",
+      "url": "http://getbootstrap.com/javascript/#tabs",
+      "type": "external"
     },
     {
-      "title": "title 2",
-      "description": "description 2",
-      "url": "url 2",
-      "type": "blog"
-    },
-    {
-      "title": "title 3",
-      "description": "description 3",
-      "url": "url 3",
+      "title": "jQuery",
+      "description": "jQuery's tab widget provides a great collection of examples:\n\nCollapse content\nContent via Ajax\nOpen on mouseover\nSimple manipulation\nSortable\nTabs at bottom\nVertical Tabs functionality\n",
+      "url": "http://jqueryui.com/tabs/",
       "type": "external"
     }
   ]

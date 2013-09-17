@@ -6,21 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Eikon Nova-Kit UI Pattern Library</title>
+        <title>UI Elements</title>
         <!-- Bootstrap core CSS -->
         <!-- Latest compiled and minified CSS -->
         <!-- link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"-->
         <!-- Optional theme -->
         <!--link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"-->
         <!-- Bootstrap Orange Theme CSS -->
+        <link rel="stylesheet" href="lib/bootstrap-select/bootstrap-select.css" />
         <link rel="stylesheet/less" type="text/css" href="css/theme.less" />
-                
         <!-- Libraries -->
         <script src="lib/less/less-1.4.1.min.js"></script>
         <script src="lib/angular/angular.js"></script>
         <script src="lib/angular/angular-resource.js"></script>
         <script src="lib/bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
-        
         <!-- App Scripts -->
         <script src="js/pLib-app.js"></script>
         <script src="js/pLib-controllers.js"></script>
@@ -49,6 +48,11 @@
                 background-color: rgba(86, 61, 124, .15);
                 border: 1px solid rgba(86, 61, 124, .2);
             }
+            /* ---- Dropdown Boostrap-Select plugin */
+                .btn.dropdown-toggle {
+                background-color: white;
+                border: 1px solid #aaa;
+            }
         </style>
     </head>
     
@@ -60,6 +64,20 @@
         <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="lib/bootstrap-select/bootstrap-select.js"></script>
+        <script type="text/javascript">
+            $(window).on('load', function() {
+                $('.selectpicker').selectpicker();
+
+                /*
+                $('.selectpicker').selectpicker({
+                    'selectedText': 'cat'
+                });
+                */
+
+                // $('.selectpicker').selectpicker('hide');
+            });
+        </script>
     </body>
 
 </html>

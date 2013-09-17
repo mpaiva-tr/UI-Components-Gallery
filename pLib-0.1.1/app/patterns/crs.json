@@ -1,0 +1,174 @@
+{
+  "id": "crs",
+  "code": "Crs",
+  "objecttype": "component",
+  "name": "Carousel",
+  "description": "When presenting a set of pictorial objects with limited screen real estate to accommodate all items at once. Planning the items order, providing different means for scrolling and communicating clearly the visual element in focus are essential for a successful use of this component.",
+  "statusLabel": "Proposal",
+  "statusColor": "warning",
+  "statusOptions": [
+    "Best Practice",
+    "Working Solution",
+    "Proposal"
+  ],
+  "category": "Component",
+  "categoryOptions": [
+    "Input",
+    "Display",
+    "Layout",
+    "Container"
+  ],
+  "tagsText": "carousel, image, slider, slideshow, hero, banner",
+  "problem": [
+    {
+      "title": "Browse collection of images",
+      "description": "User needs to browse among an anticipated set of like objects represented pictorially."
+    },
+    {
+      "title": "How many images in a collection?",
+      "description": "Browsing a large set of images could take a great screen real estate without knowing exactly how many images there are in the collection."
+    },
+    {
+      "title": "No additional context on images",
+      "description": "More than often, images are placed in the page without any alternate text description or caption."
+    }
+  ],
+  "solution": [
+    {
+      "title": "Save screen real estate",
+      "description": "Use when the user's mental model of a topic or of a set of objects is closely tied with imagery, such as a visual representation of the object, and the available screen real estate is too small to accommodate all the items at once."
+    },
+    {
+      "title": "Mobile Best Practice",
+      "description": "this component is widely used in mobile interfaces, accommodating swipe gestures navigation and zooming features."
+    },
+    {
+      "title": "Caption Overlay and Responsive Images",
+      "description": "This component provides a dark overlay that allows designers to provide descriptive context about the image object by adding caption metadata over the image."
+    }
+  ],
+  "usage": [
+    {
+      "title": "Smart screen area utilization",
+      "description": "The carousel allows a designer to better utilize page real estate while providing an engaging experience for object selection. Combining a responsive strategy to carousel component allows designers and developer to deploy a single implementation on desktop, tablets and phones."
+    },
+    {
+      "title": "Not only images, Video as well.",
+      "description": "Depending on the context, a carousel may be used to provide a peripheral browsing option when the users attention is primarily focused on something that demands a large portion of the available real estate (such as a video display).  "
+    },
+    {
+      "title": "Key considerations",
+      "description": "If the user is not \"shadowing\" simultaneous and possibly dynamic sources of info and just wants to see the maximum number of choices, either a list or grid view may be more appropriate. \n\nThus, when deciding whether to employ a carousel, consider: How is system helping the viewer manage her attention? What is the task?"
+    }
+  ],
+  "rationale": [
+    {
+      "title": "title 1",
+      "description": "description 1"
+    },
+    {
+      "title": "title 2",
+      "description": "description 2"
+    },
+    {
+      "title": "title 3",
+      "description": "description 3"
+    }
+  ],
+  "examples": [
+    {
+      "image": "img/phones/dell-venue.0.jpg",
+      "caption": "caption for image 1"
+    },
+    {
+      "image": "img/phones/dell-venue.1.jpg",
+      "caption": "caption for image 2"
+    },
+    {
+      "image": "img/phones/dell-venue.2.jpg",
+      "caption": "caption for image 3"
+    }
+  ],
+  "accessibility": [
+    {
+      "title": "Carousel is detrimental to users",
+      "description": "Accessibility expert and WebAIM associate director Jared Smith has warned us all to stop using carousels. His warning comes in the form of microsite Should I Use A Carousel?, which - in carousel format - provides reasoning for not using this kind of interface component. Along with posing accessibility issues for keyboard and screen readers, industry figures quoted on the site argue carousels are poor from an engagement standpoint.",
+      "type": "danger"
+    },
+    {
+      "title": "Consider this",
+      "description": "Carousels can present accessibility issues that affect people with a disability. For example, a blind or vision impaired user may require a screen reader to read out the content for them, and someone with a physical disability may navigate using only a keyboard — which is often not considered when implementing a carousel on a webpage.",
+      "type": "info"
+    },
+    {
+      "title": "Stop and Pause",
+      "description": "Provide user controls to pause or stop the carousel;",
+      "type": "info"
+    },
+    {
+      "title": "Keyboard Navigation",
+      "description": "Ensure user controls are keyboard navigable;",
+      "type": "info"
+    },
+    {
+      "title": "Screen readers",
+      "description": "Confirm controls are correctly labelled and with proper roles for screen readers;",
+      "type": "info"
+    }
+  ],
+  "accessibilityOptions": [
+    "success",
+    "info",
+    "warning",
+    "danger"
+  ],
+  "assets": [
+    {
+      "title": "title 1",
+      "description": "description 1",
+      "url": "url 1",
+      "type": "keynote",
+      "category": "Interaction Design"
+    },
+    {
+      "title": "title 2",
+      "description": "description 2",
+      "url": "url 2",
+      "type": "photoshop",
+      "category": "Visual Design"
+    },
+    {
+      "title": "title 3",
+      "description": "description 3",
+      "url": "url 3",
+      "type": "zip",
+      "category": "Technical Design"
+    }
+  ],
+  "assetsOptions": [
+    "Cognitive Design",
+    "Interaction Design",
+    "Visual Design",
+    "Technical Design"
+  ],
+  "references": [
+    {
+      "title": "Should I use Carousel?",
+      "description": "Carousels pose accessibility issues for keyboard and screen reader users that simply cannot be adequately addressed by markup or hacks. Carousels are this decade's <blink> tag.",
+      "url": "http://shouldiuseacarousel.com/",
+      "type": "external"
+    },
+    {
+      "title": "Accessibility expert warns: stop using carousels",
+      "description": "Accessibility expert and WebAIM associate director Jared Smith has warned us all to stop using carousels. His warning comes in the form of microsite Should I Use A Carousel?, which - in carousel format - provides reasoning for not using this kind of interface component. Along with posing accessibility issues for keyboard and screen readers, industry figures quoted on the site argue carousels are poor from an engagement standpoint.",
+      "url": "http://www.netmagazine.com/news/accessibility-expert-warns-stop-using-carousels-132875",
+      "type": "external"
+    },
+    {
+      "title": "Anatomy of an accessible carousel: everyone's responsible!",
+      "description": "The things you need to consider when adding a carousel to your website to make sure it meets accessibility standards.",
+      "url": "http://www.accessiq.org/create/content/anatomy-of-an-accessible-carousel",
+      "type": "external"
+    }
+  ]
+}

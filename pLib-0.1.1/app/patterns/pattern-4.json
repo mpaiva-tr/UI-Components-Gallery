@@ -4,8 +4,8 @@
   "objecttype": "control",
   "name": "Tab Item",
   "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
-  "statusLabel": "Best Practice",
-  "statusColor": "success",
+  "statusLabel": "Working Solution",
+  "statusColor": "info",
   "statusOptions": [
     "Best Practice",
     "Working Solution",
@@ -18,12 +18,7 @@
     "Layout",
     "Container"
   ],
-  "tags": [
-    "tag 1",
-    "tag 2",
-    "tag 3",
-    "tag 4"
-  ],
+  "tagsText" : "tag1, tag 2, tag 3, tag 4",
   "problem": [
     {
       "title": "Big Problem",
@@ -144,6 +139,12 @@
       "type": "zip",
       "category": "Technical Design"
     }
+  ],
+  "assetsOptions": [
+    "Cognitive Design",
+    "Interaction Design",
+    "Visual Design",
+    "Technical Design"
   ],
   "references": [
     {

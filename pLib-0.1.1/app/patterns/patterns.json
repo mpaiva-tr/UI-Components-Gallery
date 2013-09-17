@@ -1,58 +1,57 @@
 [
-    
-    {
-        "age": 0,
-        "id": "pattern-x",
-        "code": "Px",
-        "imageUrl": "img/phones/sanyo-zio.0.jpg",
-        "name": "Pattern Name X",
-        "category": "Input",
-        "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
-        "statusLabel": "Best Practice",
-        "statusColor": "success"
-    },
-    {
-        "age": 1,
-        "id": "pattern-1",
-        "code": "Ac",
-        "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg",
-        "name": "Accordion",
-        "category": "Input",
-        "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
-        "statusLabel": "Best Practice",
-        "statusColor": "success"
-    },
-    {
-        "age": 2,
-        "id": "pattern-2",
-        "code": "Tab",
-        "imageUrl": "img/phones/dell-venue.0.jpg",
-        "name": "Tab Control",
-        "category": "Input",
-        "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
-        "statusLabel": "Proposal",
-        "statusColor": "warning"
-    },
-    {
-        "age": 3,
-        "id": "pattern-3",
-        "code": "Tgb",
-        "imageUrl": "img/phones/lg-axis.0.jpg",
-        "name": "Toggle button",
-        "category": "Input",
-        "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
-        "statusLabel": "Working Solution",
-        "statusColor": "info"
-    },
-    {
-        "age": 4,
-        "id": "pattern-4",
-        "code": "T",
-        "imageUrl": "img/phones/nexus-s.0.jpg",
-        "name": "Tab Item",
-        "category": "Input",
-        "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
-        "statusLabel": "Working Solution",
-        "statusColor": "info"
-    }
+  {
+    "age": 0,
+    "id": "tab",
+    "code": "Tab",
+    "imageUrl": "img/patterns/pink.png",
+    "name": "Tab-Box",
+    "category": "Component",
+    "description": "A single content area with multiple panels, each associated with a header in a list.",
+    "statusLabel": "Best Practice",
+    "statusColor": "success"
+  },
+  {
+    "age": 1,
+    "id": "acc",
+    "code": "Acc",
+    "imageUrl": "img/patterns/blank.png",
+    "name": "Accordion",
+    "category": "Component",
+    "description": "An accordion (or accordion menu) is a grouped set of collapsible panels that provides access to a large number of links or other selectable items in a constrained space.",
+    "statusLabel": "Best Practice",
+    "statusColor": "success"
+  },
+  {
+    "age": 2,
+    "id": "crs",
+    "code": "Crs",
+    "imageUrl": "img/patterns/green.png",
+    "name": "Carousel",
+    "category": "Component",
+    "description": "When presenting a set of pictorial objects with limited screen real estate to accommodate all items at once. Planning the items order, providing different means for scrolling and communicating clearly the visual element in focus are essential for a successful use of this component.",
+    "statusLabel": "Proposal",
+    "statusColor": "warning"
+  },
+  {
+    "age": 3,
+    "id": "pattern-3",
+    "code": "Tgb",
+    "imageUrl": "img/patterns/blue.png",
+    "name": "Toggle button",
+    "category": "Input",
+    "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
+    "statusLabel": "Working Solution",
+    "statusColor": "info"
+  },
+  {
+    "age": 4,
+    "id": "pattern-4",
+    "code": "T",
+    "imageUrl": "img/patterns/blank.png",
+    "name": "Tab Item",
+    "category": "Input",
+    "description": "Pattern long description or summary. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis rutrum leo, sit amet adipiscing nibh gravida dignissim. Donec ultricies orci augue, vitae cursus eros commodo quis. Mauris vestibulum lectus vel risus aliquet, ut ultrices tortor imperdiet.",
+    "statusLabel": "Working Solution",
+    "statusColor": "info"
+  }
 ]

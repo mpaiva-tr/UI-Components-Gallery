@@ -18,12 +18,7 @@
     "Layout",
     "Container"
   ],
-  "tags": [
-    "tag 1",
-    "tag 2",
-    "tag 3",
-    "tag 4"
-  ],
+  "tagsText" : "tag1, tag 2, tag 3, tag 4",
   "problem": [
     {
       "title": "Big Problem",
@@ -144,6 +139,12 @@
       "type": "zip",
       "category": "Technical Design"
     }
+  ],
+  "assetsOptions": [
+    "Cognitive Design",
+    "Interaction Design",
+    "Visual Design",
+    "Technical Design"
   ],
   "references": [
     {

@@ -18,12 +18,7 @@
     "Layout",
     "Container"
   ],
-  "tags": [
-    "tag 1",
-    "tag 2",
-    "tag 3",
-    "tag 4"
-  ],
+  "tagsText": "tag1, tag 2, tag 3, tag 4",
   "problem": [
     {
       "title": "Big Problem",
@@ -82,15 +77,15 @@
   ],
   "examples": [
     {
-      "image": "img/phones/motorola-xoom-with-wi-fi.0.jpg",
+      "image": "img/patterns/blank.png",
       "caption": "caption for image 1"
     },
     {
-      "image": "img/phones/motorola-xoom-with-wi-fi.1.jpg",
+      "image": "img/patterns/orange.png",
       "caption": "caption for image 2"
     },
     {
-      "image": "img/phones/motorola-xoom-with-wi-fi.2.jpg",
+      "image": "img/patterns/blue.png",
       "caption": "caption for image 3"
     }
   ],
@@ -144,6 +139,12 @@
       "type": "zip",
       "category": "Technical Design"
     }
+  ],
+  "assetsOptions": [
+    "Cognitive Design",
+    "Interaction Design",
+    "Visual Design",
+    "Technical Design"
   ],
   "references": [
     {

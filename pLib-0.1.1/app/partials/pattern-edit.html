@@ -1,0 +1,316 @@
+<!-- Header -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <span class="glyphicon glyphicon-home"></span>&nbsp; Nova-Kit UI Patterns</a>
+        </div>
+    </div>
+</div>
+<!-- /header -->
+<!-- Body Container -->
+<form ng-submit="submit()" ng-controller="patternEditCtrl">
+    <div class="container">
+        <!-- Hero Banner -->
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-sm-9 hidden-xs">
+                    <h4>
+                        <select>
+                            <option> HELLO </option>
+                            <option>{{pattern.statusLabel}}</option>
+                            <option ng-repeat="statusOptions in pattern.statusOptions" value="{{statusOptions}}">{{statusOptions}}</option>
+                            <!--<option ng-repeat="statusOptions in pattern.statusOptions" value="{{statusOptions}}">{{statusOptions}}</option> !-->
+                            
+                        </select>
+                        <hr />
+                        <select ng-model="pattern.statusLabel" data-ng-options="statusOptions in pattern.statusOptions"></select>
+                         
+                        <hr/>
+                        <input type="text" name="pattern.statusLabel" ng-model="pattern.statusLabel">
+                        <input type="text" name="pattern.statusColor" ng-model="pattern.statusColor">
+                    </h4>
+                    <h1>
+                        <input type="text" name="pattern.name" ng-model="pattern.name">
+                    </h1>
+                </div>
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs">
+                    <div class="col-sm-12">
+                        <h4>
+                            <select name="pattern.statusLabel" class="selectpicker">
+                                <option ng-repeat="statusOptions in pattern.statusOptions" value="{{statusOptions}}">{{statusOptions}}</option>
+                            </select>
+                            <br class="visible-xs" />
+                            <input type="text" name="pattern.statusLabel" ng-model="pattern.statusLabel">
+                            <br class="visible-xs" />
+                            <input type="text" name="pattern.statusColor" ng-model="pattern.statusColor">
+                            <br class="visible-xs" />
+                            <span class="glyphicon glyphicon-info-sign pull-right"></span>
+                            <span class="pull-right">&nbsp;</span>
+                            <span class="label label-primary pull-right">{{pattern.code}}</span>
+                        </h4>
+                        <h1>
+                            <input type="text" name="pattern.name" ng-model="pattern.name">
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-sm-3 hidden-xs">
+                    <span class="glyphicon glyphicon-info-sign pull-right"></span>
+                    <span class="pull-right">&nbsp;</span>
+                    <span class="label label-id pull-right">{{pattern.code}}</span>
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row">
+                <!-- Description -->
+                <div class="col-sm-12">
+                    <textarea class="lead" name="pattern.description" rows="4" ng-model="pattern.description" style="width:100%"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- /hero banner -->
+        <!-- (6/6) Category-Status / Tags -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <h4>Category:
+                    <span class="label label-default">{{pattern.category}}</span>
+                    <select name="pattern.category" class="selectpicker">
+                        <option ng-repeat="categoryOptions in pattern.categoryOptions" value="{{categoryOptions}}">{{categoryOptions}}</option>
+                    </select>
+                    <br class="visible-xs" />
+                </h4>
+            </div>
+            <!-- Add the extra clearfix for only the required viewport -->
+            <div class="clearfix visible-xs">
+                <div class="col-xs-12 col-sm-6">
+                    <hr />
+                    <h4>Tags:
+                        <input class="token-input" type="text" name="pattern.tagsText" ng-model="pattern.tagsText">
+                        <span ng-repeat="tag in pattern.tags" class="label label-default">{{tag}}</span>
+                    </h4>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 hidden-xs text-right">
+                <h4>Tags:
+                    <input type="text" name="pattern.tagsText" ng-model="pattern.tagsText">
+                    <span ng-repeat="tag in pattern.tags" class="label label-default">{{tag}}</span>
+                </h4>
+            </div>
+        </div>
+        <!-- cat-status-tag -->
+        <hr />
+        <!-- (6/6) Examples / Problem-Solution-Usage -->
+        <div class="row">
+            <!-- Carrousel -->
+            <div class="col-xs-12 col-sm-12">
+                <div ng-controller="patternDetailCtrl">
+                    <carousel interval="myInterval">
+                        <slide ng-repeat="example in pattern.examples">
+                            <img ng-src="{{example.image}}" style="margin:auto;" ng-click="setImage(img)">
+                            <div class="carousel-caption">
+                                <p>{{pattern.name}}
+                                    <br/>
+                                    <span class="badge badge-primary">{{pattern.code}}</span>
+                                    <p>
+                                        <small>{{example.caption}}</small>
+                            </div>
+                        </slide>
+                    </carousel>
+                    <input type="hidden" ng-model="myInterval" value="1000">
+                </div>
+            </div>
+            <!-- Add the extra clearfix for only the required viewport -->
+            <div class="clearfix visible-xs">
+                <hr/>
+            </div>
+            <hr/>
+            <!-- (6/6) Problems / Solutions -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <!-- Box -->
+                    <div class="panel panel-default">
+                        <!-- box header -->
+                        <div class="panel-heading">
+                            <h4>Problem</h4>
+                        </div>
+                        <!-- box body -->
+                        <div class="panel-body">
+                            <div ng-repeat="problem in pattern.problem">
+                                <h4>
+                                    <input type="text" name="problem.title" ng-model="problem.title" style="width:100%">
+                                </h4>
+                                <textarea class="" name="problem.description" rows="4" ng-model="problem.description" style="width:100%"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /box -->
+                </div>
+                <!-- /problems -->
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs"></div>
+                <!-- Solutions -->
+                <div class="col-xs-12 col-sm-6">
+                    <!-- Box -->
+                    <div class="panel panel-default">
+                        <!-- box header -->
+                        <div class="panel-heading">
+                            <h4>Solution</h4>
+                        </div>
+                        <!-- box body -->
+                        <div class="panel-body">
+                            <div ng-repeat="solution in pattern.solution">
+                                <h4>
+                                    <input type="text" name="solution.title" ng-model="solution.title" style="width:100%">
+                                </h4>
+                                <textarea class="" name="solution.description" rows="4" ng-model="solution.description" style="width:100%"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /box -->
+                </div>
+                <!-- /solutions -->
+            </div>
+            <!-- (6/6) /problems /solutions -->
+            <hr/>
+            <!-- (6/6) Usage / Assets -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <!-- Box -->
+                    <div class="panel panel-default">
+                        <!-- box header -->
+                        <div class="panel-heading">
+                            <h4>Usage</h4>
+                        </div>
+                        <!-- box body -->
+                        <div class="panel-body">
+                            <div ng-repeat="usage in pattern.usage">
+                                <h4>
+                                    <input type="text" name="usage.title" ng-model="usage.title" style="width:100%">
+                                </h4>
+                                <textarea class="" name="usage.description" rows="4" ng-model="usage.description" style="width:100%"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /box -->
+                </div>
+                <!-- /usage -->
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs"></div>
+                <!-- Assets -->
+                <div class="col-xs-12 col-sm-6">
+                    <!-- Box -->
+                    <div class="panel panel-default">
+                        <!-- box header -->
+                        <div class="panel-heading">
+                            <h4>Design Assets</h4>
+                        </div>
+                        <!-- box body -->
+                        <div class="panel-body" ng-repeat="assets in pattern.assets">
+                            <h4>
+                                <input type="text" name="assets.title" ng-model="assets.title" style="width:100%">{{assets.title}}
+                                <small class="pull-right">
+                                    <span class="label label-default">{{assets.category}}</span>
+                                    <select name="assets.category" class="selectpicker">
+                                        <option ng-repeat="assetsOptions in pattern.assetsOptions" value="{{assetsOptions}}">{{assetsOptions}}</option>
+                                    </select>
+                                    <br class="visible-xs" />
+                                </small>
+                            </h4>
+                            <textarea class="" name="assets.description" rows="2" ng-model="assets.description" style="width:100%"></textarea>
+                            <br/>{{assets.description}}
+                            <hr />
+                            <div>
+                                <input type="text" name="assets.url" ng-model="assets.url" style="width:100%">
+                                <br/>
+                                <input type="text" name="assets.type" ng-model="assets.type" style="width:100%">
+                                <br/>
+                                <span>{{assets.url}} - {{assets.type}}</span>
+                                <button type="button" class="btn btn-primary btn-md pull-right">
+                                    <span class="glyphicon glyphicon-save"></span>{{assets.type}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /box -->
+                </div>
+                <!-- /solutions -->
+            </div>
+            <!-- (6/6) /problems /solutions -->
+            <hr/>
+            <!-- (6/6) Assets / References -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <!-- Box -->
+                    <div class="panel panel-default">
+                        <!-- box header -->
+                        <div class="panel-heading">
+                            <h4>Design Assets</h4>
+                        </div>
+                        <!-- box body -->
+                        <div class="panel-body" ng-repeat="assets in pattern.assets">
+                            <h4>{{assets.title}}
+                                <small>
+                                    <span class="label label-default pull-right">{{assets.category}}</span>
+                                </small>
+                            </h4>
+                            <p>{{assets.description}}</p>
+                            <button type="button" class="btn btn-primary btn-md pull-right">
+                                <span class="glyphicon glyphicon-save"></span>{{assets.type}}</button>
+                            <span>{{assets.url}}</span>
+                        </div>
+                    </div>
+                    <!-- /box -->
+                </div>
+                <!-- /assets -->
+                <!-- Add the extra clearfix for only the required viewport -->
+                <div class="clearfix visible-xs"></div>
+                <!-- References -->
+                <div class="col-xs-12 col-sm-6">
+                    <!-- Box -->
+                    <div class="panel panel-default">
+                        <!-- box header -->
+                        <div class="panel-heading">
+                            <h4>References</h4>
+                        </div>
+                        <!-- box body -->
+                        <div class="panel-body" ng-repeat="references in pattern.references">
+                            <h4>{{references.title}}
+                                <small>
+                                    <span class="label label-default pull-right">{{references.type}}</span>
+                                </small>
+                            </h4>
+                            <p>{{references.description}}
+                                <br/>
+                                <a href="{{references.url}}" target="blank">{{references.url}}</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /box -->
+                </div>
+                <!-- /references -->
+            </div>
+            <!-- (6/6) /assets /references -->
+            <!-- Box -->
+            <div class="panel panel-default">
+                <!-- box header -->
+                <div class="panel-heading">
+                    <h4>Accessibility</h4>
+                </div>
+                <!-- box body -->
+                <div class="panel-body" ng-repeat="accessibility in pattern.accessibility">
+                    <div class="callout callout-{{accessibility.type}}">
+                        <h4>{{accessibility.title}}</h4>
+                        <p>{{accessibility.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /box -->
+        </div>
+</form>
+<!-- /body container -->

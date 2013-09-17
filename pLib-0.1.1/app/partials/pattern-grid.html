@@ -56,17 +56,52 @@
         </div>
         <div class="col-md-6"></div>
     </div>
-    <!-- List Section -->
-    <div class="list-group">
-        <a href="#/patterns/{{pattern.id}}" class="list-group-item" ng-repeat="pattern in patterns | filter:query | orderBy:orderProp">
-            <h4 class="list-group-item-heading" style="float:left">{{pattern.name}}&nbsp;&nbsp;&nbsp;
-                <h6 class="label label-default">{{pattern.category}}</h6>
-                <h6 class="label label-{{pattern.statusColor}}">{{pattern.statusLabel}}</h6>
-                <span class="badge badge-primary pull-right">{{pattern.code}}</span>
-            </h4>
-            <p class="list-group-item-text hidden-xs" style="clear:both">{{pattern.description}}</p>
-        </a>
+    <!-- Grid Section -->
+    <div class="mp-columns">
+        <!-- Box -->
+        <div class="mp-pin" ng-repeat="pattern in patterns | filter:query | orderBy:orderProp">
+            <div class="panel panel-default" id="headings">
+                <!-- box header -->
+                <div class="panel-heading">
+                    <h4>
+                        <a href="#/patterns/{{pattern.id}}">{{pattern.name}}</a><span class="badge badge-primary pull-right">{{pattern.code}}</span>
+                    </h4>
+                </div>
+                <!-- box body -->
+                <div class="panel-body">
+                    <a href="#/patterns/{{pattern.id}}" class="thumb">
+                        <img ng-src="{{pattern.imageUrl}}" class="img-responsive">
+                    </a>
+                    <p>{{pattern.description}}</p>
+                    <hr/>
+                    <span class="label label-default">{{pattern.category}}</span><br class="visible-sm" />
+                        <span class="label label-{{pattern.statusColor}}">{{pattern.statusLabel}}</span>
+                        <!-- dropdown -->
+                        <div class="btn-group dropup pull-right">
+                            <button type="button" class="btn btn-default btn-xs">Assets</button>
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <!-- Dropdown menu links -->
+                                <li>
+                                    <a href="">Keynote Stencil</a>
+                                </li>
+                                <li>
+                                    <a href="">Photoshop Stencil</a>
+                                </li>
+                                <li>
+                                    <a href="">HTML5 Demo</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /dropdown -->
+                </div>
+
+            </div>
+            <!-- /box -->
+        </div>
     </div>
-    <!-- /list section -->
+    <!-- /grid section -->
 </div>
 <!-- /body container -->

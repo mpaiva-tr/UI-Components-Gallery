@@ -1,0 +1,150 @@
+{
+  "id": "acc",
+  "code": "Acc",
+  "objecttype": "control",
+  "name": "Accordion",
+  "description": "An accordion (or accordion menu) is a grouped set of collapsible panels that provides access to a large number of links or other selectable items in a constrained space.",
+  "statusLabel": "Best Practice",
+  "statusColor": "success",
+  "statusOptions": [
+    "Best Practice",
+    "Working Solution",
+    "Proposal"
+  ],
+  "category": "Input",
+  "categoryOptions": [
+    "Input",
+    "Display",
+    "Layout",
+    "Container"
+  ],
+  "tagsText": "accordion, list, li, vertical, menu ",
+  "problem": [
+    {
+      "title": "Constrained screen real estate.",
+      "description": "When there are too many items to fit into a limited space or when the number of items, if displayed all at once, would overwhelm the user, then the question is how to give the user access to all of the items in digestible chunks and without requiring scrolling, which can remove the user from the context or page position they may prefer."
+    }
+  ],
+  "solution": [
+    {
+      "title": "Grouping",
+      "description": "Present a two-tiered set of options.\nThe top level is categories or groupings.\nThe secondary level is the list of options that fall into each group."
+    },
+    {
+      "title": "Not a Tree-Menu",
+      "description": "Accordions are typically styled as a stack of collapsible panels (and not with the look of hierarchical trees) with the top-level category items used as labels."
+    },
+    {
+      "title": "Full Width",
+      "description": "The category labels may function as full-width handles or may be provided with a consistent expand/collapse icon.\n\nAn accordion may have one panel open by default on initial display."
+    }
+  ],
+  "usage": [
+    {
+      "title": "When to use?",
+      "description": "Use when the number of options is large, the space is constrained, and the list of items can be logically grouped into smaller, roughly equal sized chunks."
+    },
+    {
+      "title": "Why use it?",
+      "description": "The primary reason to use an accordion element is to compress a large amount of options into a limited space."
+    },
+    {
+      "title": "How to use it?",
+      "description": "Most accordions are stacked vertically, but they may also be laid out horizontally."
+    }
+  ],
+  "rationale": [
+    {
+      "title": "title 1",
+      "description": "description 1"
+    },
+    {
+      "title": "title 2",
+      "description": "description 2"
+    },
+    {
+      "title": "title 3",
+      "description": "description 3"
+    }
+  ],
+  "examples": [
+    {
+      "image": "img/patterns/blank.png",
+      "caption": "caption for image 1"
+    },
+    {
+      "image": "img/patterns/orange.png",
+      "caption": "caption for image 2"
+    },
+    {
+      "image": "img/patterns/blue.png",
+      "caption": "caption for image 3"
+    }
+  ],
+  "accessibility": [
+    {
+      "title": "Usability warning",
+      "description": "this kind of menu can cause usability issues, making users confused when clicking a link does not open a new page. Be aware of that. I would suggest at least styling the links in a way that makes it obvious that they contain hidden information.",
+      "type": "warning"
+    },
+    {
+      "title": "Semantic",
+      "description": "The menu should consist of nested lists of links using unordered list items LI.",
+      "type": "info"
+    },
+    {
+      "title": "Progressive Enhancement",
+      "description": "Should the browser lack support for JavaScript, all sub menus should be displayed, allowing the user to navigate the view. ",
+      "type": "info"
+    }
+  ],
+  "accessibilityOptions": [
+    "success",
+    "info",
+    "warning",
+    "danger"
+  ],
+  "assets": [
+    {
+      "title": "title 1",
+      "description": "description 1",
+      "url": "url 1",
+      "type": "keynote",
+      "category": "Interaction Design"
+    },
+    {
+      "title": "title 2",
+      "description": "description 2",
+      "url": "url 2",
+      "type": "photoshop",
+      "category": "Visual Design"
+    },
+    {
+      "title": "title 3",
+      "description": "description 3",
+      "url": "url 3",
+      "type": "zip",
+      "category": "Technical Design"
+    }
+  ],
+  "assetsOptions": [
+    "Cognitive Design",
+    "Interaction Design",
+    "Visual Design",
+    "Technical Design"
+  ],
+  "references": [
+    {
+      "title": "jQuery",
+      "description": "Displays collapsible content panels for presenting information in a limited amount of space. Plus very good examples and variations:\n\nCollapse content\nCustomize icons\nFill space\nNo auto height\nOpen on hover intent\nSortable\n\n\n",
+      "url": "http://jqueryui.com/accordion/",
+      "type": "external"
+    },
+    {
+      "title": "Accessible expanding and collapsing menu",
+      "description": "Taking accessibility into consideration when building an accordion menu.",
+      "url": "http://www.456bereastreet.com/archive/200705/accessible_expanding_and_collapsing_menu/",
+      "type": "blog"
+    }
+  ]
+}

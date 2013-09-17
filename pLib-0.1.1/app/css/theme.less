@@ -34,6 +34,10 @@ h1 small, .h1 small {
   color: lighten(@brand-primary, 10%);
 }
 
+a {
+    word-wrap: break-word;
+}
+
 // ---- Jumbotron
 
 .jumbotron {
@@ -85,11 +89,19 @@ h1 small, .h1 small {
   background-color: lighten(@brand-primary, 40%);
 }
 
+.btn.dropdown-toggle {
+    border-color: @brand-primary!important;
+}
+
+
+
 // ---- Labels
 
 .label {
   border-radius: 0;
   margin: 1px;
+    white-space: normal;
+    margin-bottom:15px;
 }
 
 .label-id {
@@ -106,6 +118,9 @@ h1 small, .h1 small {
   border: 1px solid @body-bg;
 }
 
+.hidden-tags .label {
+    line-height: 200%;
+}
 
 // ---- Carousel
 
@@ -180,15 +195,22 @@ h1 small, .h1 small {
   border-width: 0;
   border-top-width: 3px;
   .box-shadow(0 1px 10px rgba(0,0,0,0.15));
+    padding-bottom:10px;
+    margin-top: 10px;
 }
 
 .panel-default {
   border-top-color: @brand-primary;
 }
 
+.panel-body {
+    padding: 5px 15px;
+}
+
 .panel-heading {
   background: transparent;
   border-bottom-color: @gray-lighter;
+    margin-bottom: 10px;
 }
 
 .panel-footer {
@@ -211,8 +233,8 @@ h1 small, .h1 small {
 // ---- Progress Bars
 
 .callout {
-  margin: 20px 0;
-  padding: 15px 30px 15px 15px;
+  margin: 0px 0;
+  padding: 10px 30px 10px 15px;
   border-left: 5px solid #eee;
 }
 .callout h4 {
@@ -243,4 +265,89 @@ h1 small, .h1 small {
 .callout-info {
   background-color: lighten(@brand-info, 35%);
   border-color: lighten(@brand-info, 30%);
+}
+
+
+// ---- Pinterest-like stacking for grid layout
+
+.mp-columns {
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 15px;
+	column-fill: auto;
+    
+}
+
+.mp-pin {
+	display: inline-block;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	padding: 5px 5px 0px 5px;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+    
+}
+
+.mp-pin img, .mp-pin .panel {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+@media (min-width: 320px) {
+	.mp-columns {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+	}
+}
+
+@media (min-width: 500px) {
+	.mp-columns {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}
+}
+
+@media (min-width: 768px) {
+	.mp-columns {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+	}
+}
+
+@media (min-width: 960px) {
+	.mp-columns {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+	}
+}
+
+@media (min-width: 1100px) {
+	.mp-columns {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
+    
+    .mp-pin .dropup {
+        float:left!important;
+        margin-top: 10px;
+        width:100%;
+    
+    }
+}
+
+.mp-columns:hover .mp-pin:not(:hover) {
+	opacity: 0.65;
 }
