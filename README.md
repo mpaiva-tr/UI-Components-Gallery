@@ -1,75 +1,60 @@
-# Pattern Library System
+# UI Components Gallery
 
-#### About these Notes
+## Quick History
+***
+We started this project with the intuit to create a UI pattern gallery to allow our team to document and collect design/front-end development artifacts in general.
 
-The notes described here are mainly for my personal use. The goal is to keep a log of the steps taken to build the project and to share my experience with others that might have the same needs or interest.
+Along the way, after long debates with designers, researchers and developers, we feel that it's best to stay away from the term "Pattern" simply because it conveys different meaning to each user-segment we intend target. Therefore, the term "component" is more appropriate and inline with W3C's current "Web Components" specification to build custom/reusable elements.  
 
+
+
+## Development Specification
+***
+This initial system was created from an [initial scalfolding](http://docs.angularjs.org/tutorial) by AngularJS team.
+
+The following framework and libraries were used to develop this system:
+
+- AngularJS v1.2.0 
+- Bootstrap v3.0 (CSS and JS)
+- Less v1.4.1
+ 
+## Work-in-Progress Demo
+***
+The following link is the current release demo, please keep in mind that this is a work in progress and that any [feedback](https://github.com/mpaiva-tr/UI-Components-Gallery/issues/new)  is most welcome.
+
+[https://plib011-tufeke.backliftapp.com/#/patterns-grid](https://plib011-tufeke.backliftapp.com/#/patterns-grid)
+
+
+## Release Notes
 ***
 
-## Executive Summary
+### version 0.1.1
+- Responsive layout for List and Grid partials implemented;
+- New JSON data sample;
+- Detail partial;
+- Edit partial iniated - not finished; 
 
-One of the biggest challenges in any software design/development environment is how to maintain the level of consistency and collaboration between designers and developers.
+### version 0.0.1
+- Initial layout for landing page;
+- AngularJS Phone catalog redesigned;
+- Filter implemented;
 
-A pattern library system is a central web repository where designers and developers can collaborate and gather design and front-end development assets.
-
-
-## Key Assumptions
-
-### AngularJS
-
-I've chosen to use [AngularJS](http://angularjs.org/) to build this app, the main reason is that Angular does not rely on a database, as I'd like to keep the library as portable as possible.
-
-The [Angular tutorial](http://docs.angularjs.org/tutorial) on how to build an Angular app seems to be a perfect foundation for this type of library system, which includes all elements I have envisioned:
-
-- Grid Style
-- Live Search
-- Sorting 
-- Multiple photo assets
-- Detail page
-
-With these ingredients in place, the development process will be much shorter.
-
-### Git on Mac/Linux
-I'll be using my Mac as the dev environment. If you are on Windows, the [Angular tutorial](http://docs.angularjs.org/tutorial) has instructions for Windows.
-
+## Roadmap
 ***
+- **Database integration**
+	- migrate data sample to database
+	- good candidate at this point is CouchDB [article](http://mircozeiss.com/sync-multiple-angularjs-apps-without-server-via-pouchdb/)
+- **Github API integration**
+	-  The idea here is to leverage GitHub as repository of UI components and allow users to register new components by simply entering the GitHub URL
+- **Demo view**
+	- allow users to add a demo vie using Plunker, JsFiddle or CodePen
 
-## Getting Started
-This tutorial relies on the use of Git versioning system for source code management. You don't need to know anything about Git to follow the tutorial. 
 
-If you are intersted on learning more about Git, make sure to checkout my [Git-101](https://github.com/mpaiva-tr/Modern-Web/blob/master/GIT-101.md) page.
 
-### 1. Git
-Make sure you have Git installed by using the following command line on your **Terminal** app:
+## Ways to Contribute
+***
+1. **SEND US FEEDBACK** - If you have any great ideas, please [submit a new issue](https://github.com/mpaiva-tr/UI-Components-Gallery/issues/new) with your idea, question or bug.
+2. **DOWNLOAD THE PROJECT** - [Fork](http://help.github.com/forking/) this project and play with the code
+3. **CONTRIBUTE WITH YOUR CODE** - If you feel you can add your talent, please send us a [pull request](http://help.github.com/pull-requests/)
 
-	git --version
-	
-If you need to **install Git** enter the following:
-
-	sudo port install git-core +svn +doc +bash_completion +gitweb
-
-### 2. Node & Karma
-
-You will need [Node.js](http://nodejs.org/) and Karma to run unit tests, so please verify that you have Node.js v0.8 or better installed and that the node executable is on your PATH by running the following command in a terminal window:
-
-	node --version
-
-Additionally install [Karma](http://karma-runner.github.io/) if you don't have it already:
-
-	npm install -g karma
-
-### 3. Cloning Angular's PhoneCat app
-
-Clone the angular-phonecat repository located at Github by running the following command:
-
-	git clone git://github.com/angular/angular-phonecat.git 
-
-This command creates the angular-phonecat directory in your current directory.
-
-Change your current directory to angular-phonecat:
-
-	cd angular-phonecat
-
-The tutorial instructions assume you are running all commands from the angular-phonecat directory.
-
-You will need an http server running on your system. Mac and Linux machines typically have Apache pre-installed, but If you don't already have one installed, you can use node to run scripts/web-server.js, a simple bundled http server.
+Thanks!
