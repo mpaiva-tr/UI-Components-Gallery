@@ -1,16 +1,16 @@
 # UI Components Gallery
 
 ## Quick History
-***
-We started this project with the intuit to create a UI pattern gallery to allow our team to document and collect design/front-end development artifacts in general.
+
+We started this project with the intuit to create a UI "pattern library" to allow our team to document and collect design/front-end development artifacts in general.
 
 Along the way, after long debates with designers, researchers and developers, we feel that it's best to stay away from the term "Pattern" simply because it conveys different meaning to each user-segment we intend target. Therefore, the term "component" is more appropriate and inline with W3C's current "Web Components" specification to build custom/reusable elements.  
 
 
 
 ## Development Specification
-***
-This initial system was created from an [initial scalfolding](http://docs.angularjs.org/tutorial) by AngularJS team.
+
+The initial app was created from an [early demo](http://docs.angularjs.org/tutorial) by AngularJS team.
 
 The following framework and libraries were used to develop this system:
 
@@ -19,14 +19,13 @@ The following framework and libraries were used to develop this system:
 - Less v1.4.1
  
 ## Work-in-Progress Demo
-***
+
 The following link is the current release demo, please keep in mind that this is a work in progress and that any [feedback](https://github.com/mpaiva-tr/UI-Components-Gallery/issues/new)  is most welcome.
 
 [https://plib011-tufeke.backliftapp.com/#/patterns-grid](https://plib011-tufeke.backliftapp.com/#/patterns-grid)
 
 
 ## Release Notes
-***
 
 ### version 0.1.1
 - Responsive layout for List and Grid partials implemented;
@@ -40,7 +39,7 @@ The following link is the current release demo, please keep in mind that this is
 - Filter implemented;
 
 ## Roadmap
-***
+
 - **Database integration**
 	- migrate data sample to database
 	- good candidate at this point is CouchDB [article](http://mircozeiss.com/sync-multiple-angularjs-apps-without-server-via-pouchdb/)
@@ -52,9 +51,9 @@ The following link is the current release demo, please keep in mind that this is
 
 
 ## Ways to Contribute
-***
-1. **SEND US FEEDBACK** - If you have any great ideas, please [submit a new issue](https://github.com/mpaiva-tr/UI-Components-Gallery/issues/new) with your idea, question or bug.
-2. **DOWNLOAD THE PROJECT** - [Fork](http://help.github.com/forking/) this project and play with the code
-3. **CONTRIBUTE WITH YOUR CODE** - If you feel you can add your talent, please send us a [pull request](http://help.github.com/pull-requests/)
+
+1. **Your feedback is important** - If you have any great ideas, please [submit a new issue](https://github.com/mpaiva-tr/UI-Components-Gallery/issues/new) with your idea, question or bug.
+2. **Download the App** - [Fork](http://help.github.com/forking/) this project and play with the code
+3. **Contribute with your code** - If you feel you can add your talent, please send us a [pull request](http://help.github.com/pull-requests/)
 
 Thanks!
